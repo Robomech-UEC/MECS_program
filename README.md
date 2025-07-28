@@ -1,4 +1,4 @@
-# just-the-docs-template
+# MECS program
 
 電気通信大学ロボメカ工房の技術資料です。
 
@@ -37,11 +37,11 @@ MECS program
 
 <!-- Treeコマンドを使ってディレクトリ構成を記載 -->
 
-├─docs
-│  └─100_template
-│      ├─contents
-│      │  └─002_subsection
-│      └─imgs
+├─docs  
+│  └─100_template  
+│      ├─contents  
+│      │  └─002_subsection  
+│      └─imgs  
 
 - コンテンツはdocsの中に入っています。
 - docsの中でセクションごとにディレクトリが分かれていて、それぞれにindex.mdが含まれます。
@@ -54,9 +54,15 @@ MECS program
 Vscode上で'ctrl+shift+v'を押すとMarkdown Viewerが起動します。
 
 ### ブラウザで確認
-1. 'bundle install' を実行
-2. 'bundle exec jekyll serve' を実行。
-3. ブラウザで 'https://localhost:4000' にアクセス
+```shell
+bundle install
+```
+を実行  
+```shell
+bundle exec jekyll serve
+```
+を実行  
+ブラウザで `https://localhost:4000` にアクセス
 
 <p align="right">(<a href="#top">トップへ</a>)</p>
 
@@ -225,7 +231,8 @@ Vscode上で'ctrl+shift+v'を押すとMarkdown Viewerが起動します。
 
 ## 記事の書き方
 MECS_programはjekyllの[Just The Docs](https://just-the-docs.com/)テンプレートを用いて作られています。詳しくは公式ドキュメントを参照してください。  
-分からないことがあれば[テンプレートのGithub](https://github.com/just-the-docs/just-the-docs-template)も参照してください
+分からないことがあれば[テンプレートのGithub](https://github.com/just-the-docs/just-the-docs-template)も参照してください。  
+また、記事は[Github Pages](https://pages.github.com/)を用いて公開されています。こちらも参照してください
 
 以下は部内ルールとなります。
 
