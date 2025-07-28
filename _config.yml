@@ -7,6 +7,10 @@ url: https://just-the-docs.github.io
 aux_links:
   Robomech Work Group: https://github.com/just-the-docs/just-the-docs-template
 
+plugins:
+  - jekyll-last-modified-at
+
+# attach default to all the pages
 defaults:
   - scope:
       path:
@@ -21,6 +25,10 @@ back_to_top: true
 back_to_top_text: "先頭に戻る"
 
 footer_enable: true
+
+last_modified_at:
+  enabled: true
+  date_format: "%Y-%m-%d"
 
 last_edited:
   enabled: true
