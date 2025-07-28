@@ -1,178 +1,257 @@
 # just-the-docs-template
 
-This is a *bare-minimum* template to create a [Jekyll] site that:
+電気通信大学ロボメカ工房の技術資料です。
 
-- uses the [Just the Docs] theme;
-- can be built and published on [GitHub Pages];
-- can be built and previewed locally, and published on other platforms.
+Mechanism、Electronics、Control、Software (MECS)を包括的に扱い、ロボットの森羅万象を理解する人材の育成を目指します。
 
-More specifically, the created site:
+<div id="top"></div>
 
-- uses a gem-based approach, i.e. uses a `Gemfile` and loads the `just-the-docs` gem;
-- uses the [GitHub Pages / Actions workflow] to build and publish the site on GitHub Pages.
+## 目次
 
-To get started with creating a site, simply:
-
-1. click "[use this template]" to create a GitHub repository
-2. go to Settings > Pages > Build and deployment > Source, and select GitHub Actions
-
-If you want to maintain your docs in the `docs` directory of an existing project repo, see [Hosting your docs from an existing project repo](#hosting-your-docs-from-an-existing-project-repo).
-
-After completing the creation of your new site on GitHub, update it as needed:
-
-## Replace the content of the template pages
-
-Update the following files to your own content:
-
-- `index.md` (your new home page)
-- `README.md` (information for those who access your site repo on GitHub)
-
-## Changing the version of the theme and/or Jekyll
-
-Simply edit the relevant line(s) in the `Gemfile`.
-
-## Adding a plugin
-
-The Just the Docs theme automatically includes the [`jekyll-seo-tag`] plugin.
-
-To add an extra plugin, you need to add it in the `Gemfile` *and* in `_config.yml`. For example, to add [`jekyll-default-layout`]:
-
-- Add the following to your site's `Gemfile`:
-
-  ```ruby
-  gem "jekyll-default-layout"
-  ```
-
-- And add the following to your site's `_config.yml`:
-
-  ```yaml
-  plugins:
-    - jekyll-default-layout
-  ```
-
-Note: If you are using a Jekyll version less than 3.5.0, use the `gems` key instead of `plugins`.
-
-## Publishing your site on GitHub Pages
-
-1.  If your created site is `YOUR-USERNAME/YOUR-SITE-NAME`, update `_config.yml` to:
-
-    ```yaml
-    title: YOUR TITLE
-    description: YOUR DESCRIPTION
-    theme: just-the-docs
-
-    url: https://YOUR-USERNAME.github.io/YOUR-SITE-NAME
-
-    aux_links: # remove if you don't want this link to appear on your pages
-      Template Repository: https://github.com/YOUR-USERNAME/YOUR-SITE-NAME
-    ```
-
-2.  Push your updated `_config.yml` to your site on GitHub.
-
-3.  In your newly created repo on GitHub:
-    - go to the `Settings` tab -> `Pages` -> `Build and deployment`, then select `Source`: `GitHub Actions`.
-    - if there were any failed Actions, go to the `Actions` tab and click on `Re-run jobs`.
-
-## Building and previewing your site locally
-
-Assuming [Jekyll] and [Bundler] are installed on your computer:
-
-1.  Change your working directory to the root directory of your site.
-
-2.  Run `bundle install`.
-
-3.  Run `bundle exec jekyll serve` to build your site and preview it at `localhost:4000`.
-
-    The built site is stored in the directory `_site`.
-
-## Publishing your built site on a different platform
-
-Just upload all the files in the directory `_site`.
-
-## Customization
-
-You're free to customize sites that you create with this template, however you like!
-
-[Browse our documentation][Just the Docs] to learn more about how to use this theme.
-
-## Hosting your docs from an existing project repo
-
-You might want to maintain your docs in an existing project repo. Instead of creating a new repo using the [just-the-docs template](https://github.com/just-the-docs/just-the-docs-template), you can copy the template files into your existing repo and configure the template's Github Actions workflow to build from a `docs` directory. You can clone the template to your local machine or download the `.zip` file to access the files.
-
-### Copy the template files
-
-1.  Create a `.github/workflows` directory at your project root if your repo doesn't already have one. Copy the `pages.yml` file into this directory. GitHub Actions searches this directory for workflow files.
-
-2.  Create a `docs` directory at your project root and copy all remaining template files into this directory.
-
-### Modify the GitHub Actions workflow
-
-The GitHub Actions workflow that builds and deploys your site to Github Pages is defined by the `pages.yml` file. You'll need to edit this file to that so that your build and deploy steps look to your `docs` directory, rather than the project root.
-
-1.  Set the default `working-directory` param for the build job.
-
-    ```yaml
-    build:
-      runs-on: ubuntu-latest
-      defaults:
-        run:
-          working-directory: docs
-    ```
-
-2.  Set the `working-directory` param for the Setup Ruby step.
-
-    ```yaml
-    - name: Setup Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: '3.3'
-          bundler-cache: true
-          cache-version: 0
-          working-directory: '${{ github.workspace }}/docs'
-    ```
-
-3.  Set the path param for the Upload artifact step:
-
-    ```yaml
-    - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: docs/_site/
-    ```
-
-4.  Modify the trigger so that only changes within the `docs` directory start the workflow. Otherwise, every change to your project (even those that don't affect the docs) would trigger a new site build and deploy.
-
-    ```yaml
-    on:
-      push:
-        branches:
-          - "main"
-        paths:
-          - "docs/**"
-    ```
-
-## Licensing and Attribution
-
-This repository is licensed under the [MIT License]. You are generally free to reuse or extend upon this code as you see fit; just include the original copy of the license (which is preserved when you "make a template"). While it's not necessary, we'd love to hear from you if you do use this template, and how we can improve it for future use!
-
-The deployment GitHub Actions workflow is heavily based on GitHub's mixed-party [starter workflows]. A copy of their MIT License is available in [actions/starter-workflows].
-
-----
-
-[^1]: [It can take up to 10 minutes for changes to your site to publish after you push the changes to GitHub](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll#creating-your-site).
-
-[Jekyll]: https://jekyllrb.com
-[Just the Docs]: https://just-the-docs.github.io/just-the-docs/
-[GitHub Pages]: https://docs.github.com/en/pages
-[GitHub Pages / Actions workflow]: https://github.blog/changelog/2022-07-27-github-pages-custom-github-actions-workflows-beta/
-[Bundler]: https://bundler.io
-[use this template]: https://github.com/just-the-docs/just-the-docs-template/generate
-[`jekyll-default-layout`]: https://github.com/benbalter/jekyll-default-layout
-[`jekyll-seo-tag`]: https://jekyll.github.io/jekyll-seo-tag
-[MIT License]: https://en.wikipedia.org/wiki/MIT_License
-[starter workflows]: https://github.com/actions/starter-workflows/blob/main/pages/jekyll.yml
-[actions/starter-workflows]: https://github.com/actions/starter-workflows/blob/main/LICENSE
+1. [プロジェクトについて](#プロジェクトについて)
+2. [ディレクトリ構成](#ディレクトリ構成)
+3. [ローカル開発環境構築](#ローカル開発環境構築)
+4. [構成](#構成)
+5. [記事の書き方](#記事の書き方)
+6. [トラブルシューティング](#トラブルシューティング)
 
 
+<!-- プロジェクト名を記載 -->
 
-gem install jekyll-last-modified-at
+## プロジェクト名
+
+MECS program
+
+<!-- プロジェクトについて -->
+
+## プロジェクトについて
+
+ロボットを作るためにはさまざまな角度から技術を身に着ける必要があります。
+機構、回路、制御、ソフトについて広く知識を持つことで、より深くロボットを理解することができます。  
+この技術資料はヒューマノイド部隊、レスキュー部隊が中心となり、初心者講習のために作成しました。
+内容は基礎的なことから高度なものまで多岐にわたり、上級生にとっても参考になる資料を目指しました。
+
+<p align="right">(<a href="#top">トップへ</a>)</p>
+
+## ディレクトリ構成
+
+<!-- Treeコマンドを使ってディレクトリ構成を記載 -->
+
+├─docs
+│  └─100_template
+│      ├─contents
+│      │  └─002_subsection
+│      └─imgs
+
+- コンテンツはdocsの中に入っています。
+- docsの中でセクションごとにディレクトリが分かれていて、それぞれにindex.mdが含まれます。
+- √ディレクトリのindex.mdが初めに表示されるページになっています。
+<p align="right">(<a href="#top">トップへ</a>)</p>
+
+## ローカル開発環境構築
+
+### .mdファイルを確認
+Vscode上で'ctrl+shift+v'を押すとMarkdown Viewerが起動します。
+
+### ブラウザで確認
+1. 'bundle install' を実行
+2. 'bundle exec jekyll serve' を実行。
+3. ブラウザで 'https://localhost:4000' にアクセス
+
+<p align="right">(<a href="#top">トップへ</a>)</p>
+
+## 構成
+
+### Robot System Overview
+
+- ロボット開発
+  - Git
+  - Ubuntuのすゝめ
+- Operating System
+  - マイコンとPCの違い
+  - Raspberrypiを用いたロボット開発
+  - kernelとOS
+  - 組み込みOSとは
+  - docker
+- ROS
+  - ROSを用いたシステム構築
+  - Gazeboによるシミュレーション
+- Robot Systemの構築
+  - システム設計
+  - デバック
+- システム設計から観る森羅万象
+  - 森
+  - 羅
+  - 万
+  - 象
+
+---
+
+### 森 — Mechanism
+
+- 設計の進め方
+  - 構想
+  - ポンチ絵
+  - CAD
+  - 試作
+- 機構要素紹介
+  - アクチュエータ
+  - 動力伝達
+  - 回転
+  - 直動
+  - 締結
+  - 位置決め
+- 材料
+  - アルミ
+  - MDF
+  - POM
+  - PLA他フィラメント
+- 良い設計を目指して
+  - ユニット分割
+  - メンテ性(機構)
+  - メンテ性(回路)
+  - 回路を考えた設計
+  - 高密度設計
+  - ナットの使用
+- 3Dプリンタ
+  - 積層
+  - 熱収縮
+  - サポート
+- 公差
+
+---
+
+### 羅 — Electronics
+
+- なぜ回路を作るのか
+  - 電源の作成
+  - GNDの管理
+- 回路の燃やし方
+  - 逆接
+  - 定格
+  - ノイズ
+  - 熱
+- 電源回路
+  - DCDCコンバータ
+  - リレー
+  - MOSFET
+  - 非常停止
+  - バッテリーの扱い方
+- 通信
+  - 様々な通信
+  - 通信方式の選択
+  - 通信回路の安定化
+- マイコン・PC
+  - パスコン
+  - マイコンの選定
+- コネクタ
+  - VHコネクタの危険性について
+  - 徹夜コネクタの危険性について
+  - 定格電流
+  - コネクタ紹介
+- モータードライバ
+  - BLDC
+- Kicad入門
+  - 環境構築
+  - シンボルとフットプリント
+  - 回路図
+  - PCBエディタ
+  - ビア
+  - シンボル、フットプリントの自作
+  - 間違い探し
+  - ロゴ
+  - 複雑な外形の作成
+- 電気回路
+  - オペアンプとかトランジスタとか
+- 道具・
+  - はんだ付けに使う道具
+  - 修正方法
+  - 様々なハンダ
+  - オーブン・ヒートガン
+  - 熱収縮チューブ
+- 素子
+  - DCDCコンバータ
+  - レギュレータ
+  - MOSFET
+  - USB系
+  - 通信変換
+  - 論理回路
+  - 便利素子
+- パターン
+  - ノイズの防止
+  - 定格電流
+  - オート配線機能
+- デバック
+- 回路を安くする方法
+  - 素子選定
+  - 複数枚基板を1枚にする
+- 複雑な回路システムの作成
+  - ユニット分割
+  - メンテ性
+
+---
+
+### 万 — Control
+
+- 計測と制御
+  - センサー
+  - 通信
+- デバック
+- モデル制御
+- フィードフォワード制御
+- フィードバック制御
+- 人型ロボットの歩行理論
+
+---
+
+### 象 — Software
+
+- ソフトウェアの役割
+  - 組み込みソフトウェア
+  - ユーザー向けソフトウェア
+- ROS2
+- 組み込みソフトウェアの開発
+  - デバック
+- ユーザー向けソフトウェアの開発
+  - 入力の受け取り
+  - GUI
+  - Pyside
+  - Web GUI
+- 無線通信
+- ARマーカー
+
+
+<p align="right">(<a href="#top">トップへ</a>)</p>
+
+## 記事の書き方
+MECS_programはjekyllの[Just The Docs](https://just-the-docs.com/)テンプレートを用いて作られています。詳しくは公式ドキュメントを参照してください。  
+分からないことがあれば[テンプレートのGithub](https://github.com/just-the-docs/just-the-docs-template)も参照してください
+
+以下は部内ルールとなります。
+
+テンプレートの章(100_template)を参考にしてください。
+できるだけ階層は2層以下にとどめてください。
+
+章ごとに'index.md'を作成してください。これが章全体の説明になります。  
+コンテンツは'contents'フォルダの中で、画像は'imgs'フォルダの中で管理してください。  
+contentsの中に記事を書くときに  
+- サブフォルダを含まない場合  
+'コンテンツ番号_名前.md' というファイルを作成してください。
+- サブフォルダを含む場合  
+'コンテンツ番号_名前' というフォルダを作成し、その中にindex.mdを作成してください。
+コンテンツは 'サブフォルダ番号_コンテンツ番号_名前'としてください。
+
+サブセクション番号、コンテンツ番号はそれぞれ.mdファイルのヘッダのnav_orderと揃えてください。
+あとから書き足すことも考え、連番ではなく多少離した番号を設定してください。  
+また、フォルダ名の関係上、100未満の数であっても3桁で表してください(001,024...)。  
+
+- author:  
+作成者の名前を記載してください。
+- last_modified_at: true  
+gitのcommitから最終更新を取得します。
+
+<p align="right">(<a href="#top">トップへ</a>)</p>
+
+## トラブルシューティング
+分かりません。頑張ってください。
+<p align="right">(<a href="#top">トップへ</a>)</p>
