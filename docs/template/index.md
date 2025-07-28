@@ -2,6 +2,7 @@
 title: テンプレート
 nav_order: 1000
 author: "丸山響輝"
+last_modified_at: true
 ---
 
 # テンプレート

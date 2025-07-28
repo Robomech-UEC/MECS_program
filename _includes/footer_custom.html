@@ -2,6 +2,8 @@
   <p class="text-small text-grey-dk-100 mb-0">
 	作成者: {{ page.author }}
   </p>
+{%- endif -%}
+{%- if page.last_modified_at -%}
   <p class="text-small text-grey-dk-100 mb-0">
 	最終更新: {{ page.last_modified_at | date: "%Y年%m月"}}
   </p>
