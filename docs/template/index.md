@@ -1,7 +1,7 @@
 ---
 title: テンプレート
-nav_order: 0
-footer_content: "<p>author: 丸山響輝</p>"
+nav_order: 1000
+author: "丸山響輝"
 ---
 
 # テンプレート
