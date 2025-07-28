@@ -1,9 +1,9 @@
 ---
-title: Default layout child page
+title: 日本語出来るのかな？
 layout: default
 parent: Subtest
 ---
 
-# Default layout child page
+# 日本語出来るのかな？
 
-This is a child page that uses the `default` layout as compared to its parent page (which uses the `minimal` layout).
+題名では見た目があまりよくないようだが、それ以外では通常のフォントになっていた。
