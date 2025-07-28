@@ -51,22 +51,21 @@ MECS program
 ## ローカル開発環境構築
 
 ### .mdファイルを確認
-Vscode上で'ctrl+shift+v'を押すとMarkdown Viewerが起動します。
+Vscode上で`ctrl+shift+v`を押すとMarkdown Viewerが起動します。
 
 ### ブラウザで確認
 ```shell
 bundle install
-```
-を実行  
+```   
 ```shell
 bundle exec jekyll serve
-```
-を実行  
+```  
 ブラウザで `https://localhost:4000` にアクセス
 
 <p align="right">(<a href="#top">トップへ</a>)</p>
 
 ## 構成
+---
 
 ### Robot System Overview
 
@@ -226,6 +225,7 @@ bundle exec jekyll serve
 - 無線通信
 - ARマーカー
 
+---
 
 <p align="right">(<a href="#top">トップへ</a>)</p>
 
@@ -239,14 +239,14 @@ MECS_programはjekyllの[Just The Docs](https://just-the-docs.com/)テンプレ�
 テンプレートの章(100_template)を参考にしてください。
 できるだけ階層は2層以下にとどめてください。
 
-章ごとに'index.md'を作成してください。これが章全体の説明になります。  
-コンテンツは'contents'フォルダの中で、画像は'imgs'フォルダの中で管理してください。  
+章ごとに`index.md`を作成してください。これが章全体の説明になります。  
+コンテンツは`contents`フォルダの中で、画像は`imgs`フォルダの中で管理してください。  
 contentsの中に記事を書くときに  
 - サブフォルダを含まない場合  
-'コンテンツ番号_名前.md' というファイルを作成してください。
+`コンテンツ番号_名前.md` というファイルを作成してください。
 - サブフォルダを含む場合  
-'コンテンツ番号_名前' というフォルダを作成し、その中にindex.mdを作成してください。
-コンテンツは 'サブフォルダ番号_コンテンツ番号_名前'としてください。
+`コンテンツ番号_名前` というフォルダを作成し、その中にindex.mdを作成してください。
+コンテンツは `サブフォルダ番号_コンテンツ番号_名前`としてください。
 
 サブセクション番号、コンテンツ番号はそれぞれ.mdファイルのヘッダのnav_orderと揃えてください。
 あとから書き足すことも考え、連番ではなく多少離した番号を設定してください。  
