@@ -18,7 +18,8 @@ plugins:
   - Jekyll-last-modified-at
 
 back_to_top: true
-back_to_top_text: "Back to top"
+back_to_top_text: "先頭に戻る"
+
 footer_enable: true
 
 last_edited:
