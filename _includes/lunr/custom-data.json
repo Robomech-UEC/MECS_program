@@ -1,0 +1,4 @@
+{%- capture newline %}
+{% endcapture -%}
+"author": {{ include.page.author | markdownify | replace:newline,' ' | strip_html | normalize_whitespace | strip | jsonify }},
+"edit": {{ include.page.edit | markdownify | replace:newline,' ' | strip_html | normalize_whitespace | strip | jsonify }},

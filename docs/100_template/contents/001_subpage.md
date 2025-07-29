@@ -3,7 +3,7 @@ title: サブページテンプレート
 parent: テンプレート
 nav_order: 1
 
-author: hibiki
+author: 丸山響輝
 last_modified_at: true
 ---
 

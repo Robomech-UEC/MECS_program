@@ -1,7 +1,7 @@
 ---
 title: ドキュメント作成に当たって
 nav_order: 99
-author: hibiki
+author: 丸山響輝
 last_modified_at: true
 ---
 

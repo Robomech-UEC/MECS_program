@@ -3,7 +3,7 @@ title: さらに下の階層を持つ場合
 parent: テンプレート
 nav_order: 2
 
-author: hibiki
+author: 丸山響輝
 last_modified_at: true
 ---
 

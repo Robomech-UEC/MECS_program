@@ -1,7 +1,7 @@
 ---
 title: テンプレート
 nav_order: 100
-author: hibiki
+author: 丸山響輝
 last_modified_at: true
 
 # trueにすると出力から外せます
