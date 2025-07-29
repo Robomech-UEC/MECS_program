@@ -7,8 +7,6 @@ url: https://just-the-docs.github.io
 aux_links:
   Robomech Work Group: https://github.com/Robomech-UEC
 
-logo: "RMF_logo.png"
-
 plugins:
   - jekyll-last-modified-at
 
