@@ -1,11 +1,11 @@
-title: MECS program
-description: A starter template for a Jeykll site using the Just the Docs theme!
+title: Robo-MECS
+description: A technical documentation for Robomech Factory forcused on Mechanism, Electronics, Control, Software.
 theme: just-the-docs
 
 url: https://just-the-docs.github.io
 
 aux_links:
-  Robomech Work Group: https://github.com/just-the-docs/just-the-docs-template
+  Robomech Work Group: https://github.com/Robomech-UEC
 
 plugins:
   - jekyll-last-modified-at

@@ -1,8 +1,23 @@
 {%- if page.author -%}
-  <p class="text-small text-grey-dk-100 mb-0">
-	作成者: {{ page.author }}
+  {% assign person = site.data.authors[page.author] -%}
+  <p class="text-small text-grey-dk-100 mb-0" style="line-height: 0.8;">
+	作成者: 
+	{{ person.name | default: page.author }}
+	/ {{ person.year | default: }}
+	/ {{ person.unit | default: }}
   </p>
 {%- endif -%}
-<p class="text-small text-grey-dk-100 mb-0">
+
+{% if page.edit -%}
+  <p class="text-small text-grey-dk-100 mb-0" style="line-height: 0.8;">
+    編集：
+	{% for id in page.edit %}
+      {% assign person = site.data.authors[id] %}
+	    {{ person.name }} / {{ person.year }} / {{ person.unit }} ・
+    {% endfor %}
+  </p>
+{% endif %}
+
+<p class="text-small text-grey-dk-100 mb-0" style="line-height: 0.8;">
   最終更新: {{ page.last_modified_at | date: "%Y年 %m/%d" }}
 </p>
