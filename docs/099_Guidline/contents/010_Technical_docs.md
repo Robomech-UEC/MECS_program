@@ -104,3 +104,12 @@ docs[i].content = content_to_merge.join(' ');
 ```  
 
 これにより、author,editの中に書かれている名前を検索することができます。
+
+## Build and Deploy
+
+BuildとDeployについては、`.github/workflows`の中に入っているyamlファイルに従って行われます。  
+設定はTemplateをコピーしたときから変えていません。  
+mainブランチをbuild,deployすることになっており、pushされたタイミングでjobを実行します。  
+ciがbuild、pagesがdeployについて書かれているもの(らしい)ので、うまくいかなかったら参照してください。  
+Githubのsetting/pagesでGithubActionを選ぶとjekyll.yamlを作らせようとしてきますが、すでにworkflowは存在するので新しいものは作らないでください。  
+pushするとしばらく時間はかかりますがjobがおわり、urlが表示される(または内容が更新される)ようになりますので、しばらく待ちましょう。
