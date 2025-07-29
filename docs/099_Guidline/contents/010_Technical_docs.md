@@ -85,4 +85,21 @@ Just the Docsテンプレートはもともと英語向けなので、日本語�
 		...
 ```
 のように書き加えました。  
-これにより、日本語検索機能を実装しました。
+これにより、日本語検索機能を実装しました。  
+
+さらに、作成者や編集者での検索を可能にするため、`_includes/lunr`の中に以下の2つのファイルを作成しました。  
+custom-data.json
+```json
+{%- capture newline %}
+{% endcapture -%}
+"author": {{ include.page.author | markdownify | replace:newline,' ' | strip_html | normalize_whitespace | strip | jsonify }},
+"edit": {{ include.page.edit | markdownify | replace:newline,' ' | strip_html | normalize_whitespace | strip | jsonify }},
+
+```
+custom-index.json
+```json
+const content_to_merge = [docs[i].content, docs[i].author, docs[i].edit];
+docs[i].content = content_to_merge.join(' ');
+```
+
+これにより、author,editの中に書かれている名前を検索することができます。
