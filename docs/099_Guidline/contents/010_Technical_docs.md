@@ -40,7 +40,7 @@ hibiki:
 ```
 のようにして各作成者の情報をまとめておけるようにしました。これで、`author: hibiki`と書くだけですべての情報をフッターに入れられるようになります。
 
-# last modified at
+## last modified at
 
 最終更新を書いておきたいなと思い作成しました。jekyllにgitと連携するライブラリが存在していたので、`Gemfile`に
 ```Gemfile
@@ -65,7 +65,7 @@ last_modified_at:
 ```
 を追加しておしまい。
 
-# search
+## search
 Just the Docsテンプレートはもともと英語向けなので、日本語は検索対象に入っていませんでした。調べてみたところ、テンプレートはもともとlunrというシステムを使っており、lunrには日本語対応機能もあったので、これを導入しました。  
 ここで、[ドキュメント](https://just-the-docs.github.io/just-the-docs/docs/search/#enable-search-in-configuration)にsearchセクションのカスタマイズについて乗っていたのですがこれでは足りなかったので、`assets/js/just-the-docs.js`と`_layouts/default.html`を直接編集することになりました。  
 まず`assets/js/lunr-languages`に`lunr.ja.js`、`lunr.setmmer.support.js`、`tinyseg.js`を公式サイトからダウンロードし、`default.html`に
