@@ -6,9 +6,16 @@ layout: table_wrappers
 
 <html lang="{{ site.lang | default: 'en-US' }}">
 {% include head.html %}
+
+<!-- search function for Japanese -->
 <script src="{{ '/assets/js/lunr-languages/lunr.setmmer.support.js' | relative_url }}"></script>
 <script src="{{ '/assets/js/lunr-languages/tinyseg.js' | relative_url }}"></script>
 <script src="{{ '/assets/js/lunr-languages/lunr.ja.js' | relative_url }}"></script>
+<!-- MathJax -->
+<script type="text/javascript" async
+	src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+
 <body>
   <a class="skip-to-main" href="#main-content">Skip to main content</a>
   {% include icons/icons.html %}
