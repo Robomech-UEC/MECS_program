@@ -8,6 +8,19 @@
   </p>
 {%- endif -%}
 
+{%- if page.comment -%}
+  <p class="text-small text-grey-dk-100 mb-0" style="line-height: 0.8;">
+	コメント: {{ page.comment }}
+  </p>
+{%- endif -%}
+
+{%- assign page = page | default: {} -%}
+{%- assign site = site | default: {} -%}
+{%- assign site.data = site.data | default: {} -%}
+{%- assign site.data.authors = site.data.authors | default: {} -%}
+{%- assign page.edit = page.edit | default: [] -%}
+{%- assign page.last_modified_at = page.last_modified_at | default: "" -%}
+
 {% if page.edit -%}
   <p class="text-small text-grey-dk-100 mb-0" style="line-height: 0.8;">
     編集：
