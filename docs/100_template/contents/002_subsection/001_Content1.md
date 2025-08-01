@@ -9,4 +9,4 @@ last_modified_at: true
 
 # コンテンツ
 
-2重に番号を振ってください(例:002_001_contents.md)
+3桁で番号を振ってください(例:001_contents.md)
