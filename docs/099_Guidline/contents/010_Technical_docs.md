@@ -6,7 +6,7 @@ nav_order: 10
 author: 丸山響輝
 last_modified_at: true
 
-state: done
+state: editing
 ---
 
 # **技術資料**

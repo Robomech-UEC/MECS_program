@@ -6,7 +6,7 @@ nav_order: 4
 author: 丸山響輝
 last_modified_at: true
 
-state: editing
+state: done
 ---
 
 # **ドキュメントの描き方**
