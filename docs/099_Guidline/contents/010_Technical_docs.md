@@ -5,9 +5,18 @@ nav_order: 10
 
 author: 丸山響輝
 last_modified_at: true
+
+state: editing
 ---
 
-# 技術資料
+# **技術資料**
+{: .no_toc }
+
+## 目次
+{: .no_toc .text-delta }
+
+1. TOC
+{:toc}
 
 Robo-MECSのページを作成する際にテンプレートから変更した点について書いてあります。
 
