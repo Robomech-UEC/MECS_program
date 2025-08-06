@@ -6,7 +6,7 @@ nav_order: 10
 author: 丸山響輝
 last_modified_at: true
 
-state: editing
+state: done
 ---
 
 # **技術資料**
@@ -122,3 +122,46 @@ mainブランチをbuild,deployすることになっており、pushされたタ
 ciがbuild、pagesがdeployについて書かれているもの(らしい)ので、うまくいかなかったら参照してください。  
 Githubのsetting/pagesでGithubActionを選ぶとjekyll.yamlを作らせようとしてきますが、すでにworkflowは存在するので新しいものは作らないでください。  
 pushするとしばらく時間はかかりますがjobがおわり、urlが表示される(または内容が更新される)ようになりますので、しばらく待ちましょう。
+
+# state
+各ページごとに編集stateが欲しいと思い作りました。stateはnavigationバーに表示されます。  
+どうやらnavに関するhtml変換は`_includes/components/nav`に入っているようなので、ここをあさります。  
+開発者ツールを使ってnavigationバーを見てみたところ、タイトルは`nav-list-link`というclassになっているようです。もっとよく見てみると、  
+`side-bar -> site-header -> nav:Main -> ul:nav-list -> li:nav-list-item -> a:class:nav-list-item`(書き方あってるかは知らない)  
+のような構造になっていたので、構造をたどりながら調べた。  
+すると、`_includes/componetns/nav/links.html`に対称のaタグを見つけたので次のように編集  
+```html
+{% raw %}
+<li class="nav-list-item">
+	{%- if nav_children.size >= 1 -%}
+	<button class="nav-list-expander btn-reset" aria-label="toggle items in {{ node.title }} category" aria-pressed="false">
+	<svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+	</button>
+	{%- endif -%}
+	<a href="{{ node.url | relative_url }}" class="nav-list-link">
+	{{ node.title }} 
+	<!-- show page state after title -->
+	{%-if node.state -%}
+		[
+		<span style="font-size: 0.5em; margin-left: -0.3em; vertical-align: middle">
+		{{ site.data.states[node.state] }}
+		</span>
+		]
+	{%- endif -%}
+	</a>
+	{%- if nav_children.size >= 1 -%}
+	{%- if node.child_nav_order == 'desc' or node.child_nav_order == 'reversed' -%}
+		{%- assign nav_children = nav_children | reverse -%}
+	{%- endif -%}
+	{%- assign nav_ancestors = include.ancestors | push: node.title -%}
+	{%- include components/nav/links.html pages=nav_children ancestors=nav_ancestors all=include.all -%}
+	{%- endif -%}
+</li>
+{% endraw %}
+```  
+このとき、後でstateを追加しやすいように、`_data/states.yaml`を書いた。
+```yaml
+notyet: " "
+editing: "○"
+done: "●"
+```
