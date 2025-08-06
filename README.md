@@ -1,4 +1,4 @@
-# MECS program
+# Robo-MECS
 
 電気通信大学ロボメカ工房の技術資料です。
 
