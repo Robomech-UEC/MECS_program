@@ -5,7 +5,7 @@ nav_order: 13
 
 author: 後藤波瑠
 last_modified_at: true
-status: editing
+state: editing
 ---
 
 # **試作**

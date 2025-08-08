@@ -5,7 +5,7 @@ nav_order: 2
 
 author: 後藤波瑠
 last_modified_at: true
-status: notyet
+state: notyet
 ---
 
 # **機構要素紹介**
