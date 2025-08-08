@@ -1,6 +1,6 @@
 ---
 title: Robot Sytem Overview
-nav_order: 1
+nav_order: 2
 
 author: 後藤波瑠
 last_modified_at: true
