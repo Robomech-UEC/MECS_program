@@ -1,6 +1,6 @@
 ---
 title: 機構要素紹介
-parent: mechanical elements
+parent: 森 ーMechanism
 nav_order: 2
 
 author: 後藤波瑠

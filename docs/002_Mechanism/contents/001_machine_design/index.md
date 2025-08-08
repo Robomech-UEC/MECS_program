@@ -1,6 +1,6 @@
 ---
 title: 設計の進め方
-parent: machine design
+parent: 森 ーMechanism
 nav_order: 1
 
 author: 後藤波瑠
