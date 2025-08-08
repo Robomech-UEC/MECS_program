@@ -1,5 +1,6 @@
 ---
-title: Robot Sytem Overview
+title: 設計の進め方
+parent: machine design
 nav_order: 1
 
 author: 後藤波瑠
