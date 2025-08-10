@@ -10,4 +10,18 @@ state: notyet
 ---
 
 # **Ubuntuのすゝめ**
+{: .no_toc }
 
+## 目次
+{: .no_toc .text-delta }
+
+1. TOC
+{:toc}
+
+## Ubuntuとは
+## Windowsとの違い
+## Dualbootについて
+## Unixとは?
+## OSの歴史
+## Unixコマンド
+## Vimのすゝめ
