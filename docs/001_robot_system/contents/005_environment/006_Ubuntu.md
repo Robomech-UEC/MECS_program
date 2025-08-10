@@ -10,3 +10,4 @@ state: notyet
 ---
 
 # **Ubuntuのすゝめ**
+
