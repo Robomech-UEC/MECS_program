@@ -6,7 +6,6 @@ nav_order: 5
 
 author: 丸山響輝
 last_modified_at: true
-state: editing
 ---
 
 # **ロボット開発の環境構築**
