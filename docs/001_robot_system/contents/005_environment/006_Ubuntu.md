@@ -6,7 +6,8 @@ nav_order: 6
 
 author: 丸山響輝
 last_modified_at: true
-state: notyet
+comment: "コマンドについて以外は書き終えた"
+state: editing
 ---
 
 # **Ubuntuのすゝめ**
