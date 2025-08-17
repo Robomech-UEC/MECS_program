@@ -160,4 +160,48 @@ netplan、arp、dkms...
 時々プロセスがlocされています。というエラーが出るが、これはプロセスが正常終了できず次に行けないというエラーであり、このときに`/var/lock/hogehoge.loc`というファイルを消すとlockが解除される。
 
 ## Macのファイルシステム、ディレクトリ構成
+ちょっとわかんないんでAIに書かせました。根っこはUnixなので、linux見ればだいたいわかるんじゃないかなーと思ってます。Macがわかる人、ぜひ書き直してください。
 
+macOS は **APFS (Apple File System)** を使用し、Unix 系 OS と同様に `/` をルートとして管理します。  
+外部ドライブは `/Volumes` 配下にマウントされます。
+
+### root 権限
+- root ユーザーが OS の重要操作を行う  
+- 必要に応じて `sudo` コマンドで一時的に権限を借りる  
+
+### 主なディレクトリ
+
+- **/Applications**  
+  アプリケーションを格納（Windows の Program Files 相当）  
+
+- **/System**  
+  OS 本体のシステムファイル  
+
+- **/Library**  
+  システム全体で使うライブラリや設定ファイル  
+
+- **/usr**  
+  全ユーザー共通で使うコマンド・ライブラリ  
+  - `/usr/bin`、`/usr/lib`、`/usr/sbin`  
+
+- **/bin**  
+  基本的なコマンド  
+
+- **/tmp**  
+  一時ファイル  
+
+- **/var**  
+  ログやキャッシュ  
+
+- **/dev**  
+  デバイスファイル  
+
+- **/Volumes**  
+  外部ドライブやネットワークドライブのマウントポイント  
+
+- **/Users**  
+  ホームディレクトリ  
+  - `/Users/username/Documents`：書類  
+  - `/Users/username/Desktop`：デスクトップ  
+  - `/Users/username/Downloads`：ダウンロード  
+  - `/Users/username/Library`：ユーザー専用設定やキャッシュ  
