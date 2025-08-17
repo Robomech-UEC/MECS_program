@@ -85,68 +85,79 @@ linuxではだれがsudoをデフォルトで使えるか、を設定するこ�
 ### FHS
 Filesystem Hierarchy Standard。linuxの全ディストリビューションで、ディレクトリ構成に関する統一化が図られています。現在でも多くの差異はあるため、これは1つの指標程度に捉えてください。
 
-- /bin  
-
+- /bin(Binaries)  
+rootと一般ユーザーが使うことのできる基本的なコマンドが格納されている。  
+python、which、apt、ls、rm、mkdir...  
+例えば`ls -l apt`とすると、  
+`-rwxr-xr-x 1 root root 18824 Sep  5  2024 apt`  
+このような出力が得られる。
 
 - /boot  
+システム起動時に必要なファイルが格納してある。BIOSの影響を受けないためにここにいるが、いじることはない。
 
+- /dev(Device)  
+ハードウェアや周辺機器はここに接続される。例えばマイコンをPCにつなぎ、シリアルで接続すると、開かれるシリアルポートはたいてい`/dev/tty/ACM0`や`/dev/tty/USB0`のような名前になる。  
+この階層の設計思想はUnixを受け継いでおり、デバイスはファイルと同じようにOpen,Read,Write,Closeができるような扱いがされる。
 
-- /dev  
-
-
-- /etc  
+- /etc(Etcetra)  
+システムの設定ファイル。ここにあるファイルを変更することでOSのシステム周りをいじることができる。
   - /etc/systemd  
   - /etc/udev  
+  udev.confというファイルがある。ここにコンフィグを追加すると、デバイスが接続した際のOSの挙動を変更することができる。
   - /etc/ssh  
-  - /etc/ros/rosdep/sources.list.d
-  - /etc/NetworkManager
+  外部からのssh接続を可能にする。
   - /etc/netplan
-  - /etc/kernel
-  - /etc/fonts
+  yamlファイルで接続するネットワークの設定や自分のipアドレスの設定を書くことができる。
   - /etc/dpkg  
+  追加したパッケージの情報などが格納される。基本的には触らない。  
+  ここで扱われるものはpackage(.debファイル)で、ソフトウェアに関わるところ。つまりOS側のパッケージ。
   - /etc/dkms
-  - /etc/dhcp
-  - /etc/apt
-  - /etc/
+  Dynemic kernel module Support  
+  dpkgとは違いkernelに依存するモジュールで、どれを使うかが書いてある。kernelのupdateの際に参照され、必要なパッケージがダウンロードされるようになっている。
+  - /etc/ros/rosdep/sources.list.d
+  これはrosに関するもの。updateが失敗するときは結構ここに問題がある。
 
 - /home  
+各ユーザーのホームディレクトリ。WindowsではUsersとなっている。
+  - /home/uname  
+  基本的にファイル系はここにまとめておくとよい。
 
+- /lib(library)  
+システムの起動時に必要なものや、bin、sbinのコマンド実行に必要なライブラリが格納されている。触らない。
 
-- /lib  
+- /mnt(mount)  
+外部のファイルシステムを一時的にマウントする際に使う。usbやsdカードをフォーマットするときなどはここにマウントする。
 
+- /opt(optional)  
+外部パッケージが入るところ。rosはここにいる。
 
-- /media  
-
-
-- /mnt  
-
-
-- /opt  
-
-
-- /proc  
-
+- /proc(Process)  
+kernel([OSの構成](003_composition)参照)内部の情報にアクセスするための仮想階層。
+CPU情報やメモリの使用状況、ネットワーク情報が参照できる。
 
 - /root  
+システム管理者のホーム。homeが壊れてもここで作業が続行できる、ということらしい。
 
+- /sbin(System Binary)  
+OSが動作するために必要なコマンドが格納されている。ここにあるコマンドはすべて実行にsudo権限が必要  
+netplan、arp、dkms...
 
-- /run  
-
-
-- /sbin  
-
-
-- /sys  
-
-
-- /tmp  
-
+- /tmp(Temporary)  
+一時的に使用するファイルを格納する。再起動時にリセットされる。
 
 - /usr  
+  全ユーザーが使うものが格納されている。ユーザー単位のrootのようなもの。bin,sbin,libの本体はじつはここ。
+  - /usr/bin  
+  /binの本体。
+  ```sh
+  ~$ ls -ld /bin
+  lrwxrwxrwx 1 root root 7 Mar 29  2024 /bin -> usr/bin
+  ```
+  というように、/binは単に/usr/binへのリンクに過ぎない。ではなぜ/binが存在しているかと言うと、usrがない場合にも最低限のコマンドは実行できるようにするためである。
 
-
-- /var  
-
+- /var(Variable)  
+システム運用中のログファイルが格納される。  
+時々プロセスがlocされています。というエラーが出るが、これはプロセスが正常終了できず次に行けないというエラーであり、このときに`/var/lock/hogehoge.loc`というファイルを消すとlockが解除される。
 
 ## Macのファイルシステム、ディレクトリ構成
 
