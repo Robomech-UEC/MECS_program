@@ -20,6 +20,7 @@ state: editing
 
 ## OSの構成
 
+
 ## kernel
 
 ## Daemon
