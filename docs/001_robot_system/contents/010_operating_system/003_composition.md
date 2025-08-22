@@ -70,7 +70,33 @@ linuxのシステムを触るとよく出てくるもので、多くのdebien系
 動作レベルの説明で、kernelとdaemonの実行権限は異なる、という話をしました。しかしdaemonからハードウェアに直接入力を行ったり、ハードウェアからの入力を割り込みとして処理をしたりしたいときもあります。そんな時には、daemonがkernelの権限を一時的に借りることが出来ます。これをsystem callと呼び、kernel関数を実行することができます。
 
 ## shell
+さて、ユーザーに近づいてきました。shellというのはターミナルやWindowsのコマンドプロンプトなど、ユーザがPCを触るために使うCUIの部分です。shell機能によってdaemonを管理したり、kernelに命令を出してcpuの状態を監視したり、実行体を作成したりすることが出来ます。  
+ただし、実はGUIの機能も一種のshellで、コマンドラインのみの操作ではなくより人間にとって使いやすいように工夫されています。  
+ここではLinux系のディストリビューションで用いられているbashというshellについて説明します。  
 
+### shell command
+shellはコマンド入力で動作させることができます。例えばcd,lsなどのコマンドもすべてshell commandです。例えば、echoコマンドについて考えてみましょう。  
+`echo "hello world"`  
+これを実行すると、ターミナルに`hello world`と表示されます。これが、シェルコマンドです。
+
+### shell script
+shell scriptとは、shellコマンドを羅列したtxtファイルです。.shという拡張子が付きます。先ほどのechoコマンドをshell scriptとして使うと、
+```sh
+#!/usr/bin/bash
+
+echo "hello world"
+
+exit 0
+```
+となります。ターミナルでこれをhello.shとして保存し、`./hello.sh`と入力すると先ほどと同じ結果が得られます。  
+shell commandは多くのプログラム言語と同じように変数を作成したり、外部から入力を受け取ったりでき、さらにfor文、if文を使うこともできます。  
+これらの機能を駆使すると、使いやすいshell scriptを書くことができ、様々な動作を自動化することができるのです。
+
+### shellの使いどころ
+実はdaemonの中身はshell scriptです。そのため自分で書いたscriptをバックグラウンドで動作するシステムとして用いることができます。また、script事態を補完おおdaemonに読み込ませるようにして自動実行させることも可能です。  
+コマンドが長くて打つのが面倒なコンパイルや、ビルド、アプリケーションのアップデートなどなど、shell scriptを書けるようになっておくと何度もしなければいけない作業を一部自動化することができます。ぜひshellを書けるようになってください。  
 
 ## 参考サイト
 [簡潔でわかりやすい。ただ、前提知識が必要](https://qiita.com/tatsuya4150/items/f830c9b2ae33275aef42)  
+[sudo新一](https://gist.github.com/greymd/7291d1d54587ad6ed401d536e1995b2c)  
+[shell scriptの書き方](https://www.sejuku.net/blog/54333?utm_source=blog&utm_medium=blog&utm_campaign=blog__53611)  
