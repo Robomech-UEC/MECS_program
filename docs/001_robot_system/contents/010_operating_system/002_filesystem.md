@@ -7,6 +7,7 @@ nav_order: 2
 author: 丸山響輝
 last_modified_at: true
 state: editing
+comment: "MacOSのディレクトリ構造について、わかる人お願いします"
 ---
 
 # **File System**
