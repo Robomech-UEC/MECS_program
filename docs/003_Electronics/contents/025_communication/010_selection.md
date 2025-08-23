@@ -1,6 +1,6 @@
 ---
-title: RTOS
-parent: Operating System
+title: 通信方式の選択
+parent: 通信
 
 nav_order: 10
 
@@ -9,7 +9,7 @@ last_modified_at: true
 state: notyet
 ---
 
-# **RTOS**
+# **通信方式の選択**
 {: .no_toc }
 
 ## 目次
@@ -17,4 +17,3 @@ state: notyet
 
 1. TOC
 {:toc}
-

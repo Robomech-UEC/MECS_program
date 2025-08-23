@@ -1,15 +1,15 @@
 ---
-title: RTOS
-parent: Operating System
+title: コネクタ紹介
+parent: コネクタ
 
-nav_order: 10
+nav_order: 15
 
 author: 丸山響輝
 last_modified_at: true
 state: notyet
 ---
 
-# **RTOS**
+# * コネクタ紹介**
 {: .no_toc }
 
 ## 目次
@@ -17,4 +17,3 @@ state: notyet
 
 1. TOC
 {:toc}
-

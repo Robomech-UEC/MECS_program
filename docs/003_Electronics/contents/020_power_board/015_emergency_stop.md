@@ -1,6 +1,6 @@
 ---
-title: 組み込みシステム入門
-parent: Operating System
+title: 非常停止
+parent: 電源基板
 
 nav_order: 15
 
@@ -9,7 +9,7 @@ last_modified_at: true
 state: notyet
 ---
 
-# **組み込みシステム入門**
+# **非常停止**
 {: .no_toc }
 
 ## 目次
@@ -18,3 +18,5 @@ state: notyet
 1. TOC
 {:toc}
 
+## リレーを用いた非常停止
+## MOSFETを用いた非常停止

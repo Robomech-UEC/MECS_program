@@ -1,15 +1,15 @@
 ---
-title: RTOS
-parent: Operating System
+title: 電源の安定化
+parent: マイコン・PC
 
-nav_order: 10
+nav_order: 15
 
 author: 丸山響輝
 last_modified_at: true
 state: notyet
 ---
 
-# **RTOS**
+# **電源の安定化**
 {: .no_toc }
 
 ## 目次
@@ -18,3 +18,4 @@ state: notyet
 1. TOC
 {:toc}
 
+## パスコン

@@ -1,6 +1,6 @@
 ---
-title: RTOS
-parent: Operating System
+title: スイッチ
+parent: 電源基板
 
 nav_order: 10
 
@@ -9,7 +9,7 @@ last_modified_at: true
 state: notyet
 ---
 
-# **RTOS**
+# **スイッチ**
 {: .no_toc }
 
 ## 目次
@@ -18,3 +18,5 @@ state: notyet
 1. TOC
 {:toc}
 
+## リレー
+## MOSFET

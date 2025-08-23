@@ -1,15 +1,15 @@
 ---
-title: 組み込みシステム入門
-parent: Operating System
+title: 回路の燃やし方
+parent: 羅 ーElectronics
 
 nav_order: 15
 
 author: 丸山響輝
 last_modified_at: true
-state: notyet
+state: done
 ---
 
-# **組み込みシステム入門**
+# **回路の燃やし方**
 {: .no_toc }
 
 ## 目次
@@ -17,4 +17,3 @@ state: notyet
 
 1. TOC
 {:toc}
-

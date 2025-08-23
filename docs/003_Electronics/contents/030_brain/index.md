@@ -1,15 +1,15 @@
 ---
-title: RTOS
-parent: Operating System
+title: マイコン・PC
+parent: 羅 ーElectronics
 
-nav_order: 10
+nav_order: 30
 
 author: 丸山響輝
 last_modified_at: true
-state: notyet
+state: done
 ---
 
-# **RTOS**
+# **マイコン・PC**
 {: .no_toc }
 
 ## 目次
@@ -17,4 +17,3 @@ state: notyet
 
 1. TOC
 {:toc}
-
