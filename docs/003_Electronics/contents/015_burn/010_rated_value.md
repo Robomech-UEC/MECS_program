@@ -2,7 +2,7 @@
 title: 定格
 parent: 回路の燃やし方
 
-nav_order: 5
+nav_order: 10
 
 author: 丸山響輝
 last_modified_at: true
