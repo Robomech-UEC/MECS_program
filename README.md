@@ -17,7 +17,7 @@ Mechanism、Electronics、Control、Software (MECS)を包括的に扱い、ロ�
 
 ## サイトについて
 
-<a href="https://robomech-uec.github.io/Robo-MECS" target="_blank" rel="nonpener noreferrer">Robo-MECS</a>  
+![Robo-MECS](https://robomech-uec.github.io/Robo-MECS/){:target="_blank}  
 
 ロボットを作るためにはさまざまな角度から技術を身に着ける必要があります。
 機構、回路、制御、ソフトについて広く知識を持つことで、より深くロボットを理解することができます。  
