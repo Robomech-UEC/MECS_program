@@ -2,11 +2,10 @@
 title: コネクタ
 parent: 羅 ーElectronics
 
-nav_order: 1
+nav_order: 35
 
 author: 丸山響輝
 last_modified_at: true
-state: done
 ---
 
 # **コネクタ**
