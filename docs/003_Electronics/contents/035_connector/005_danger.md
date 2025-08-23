@@ -1,5 +1,5 @@
 ---
-title: 徹夜コネクタの危険性について
+title: 徹夜コネクタ
 parent: コネクタ
 
 nav_order: 5

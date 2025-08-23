@@ -1,15 +1,15 @@
 ---
-title: 様々な通信
+title: 変換
 parent: 通信
 
-nav_order: 5
+nav_order: 20
 
 author: 丸山響輝
 last_modified_at: true
 state: notyet
 ---
 
-# **様々な通信**
+# **変換**
 {: .no_toc }
 
 ## 目次

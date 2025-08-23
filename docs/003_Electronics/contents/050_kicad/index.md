@@ -6,7 +6,7 @@ nav_order: 50
 
 author: 丸山響輝
 last_modified_at: true
-state: done
+state: notyet
 ---
 
 # **Kicad入門**
