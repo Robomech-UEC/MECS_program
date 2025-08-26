@@ -1,5 +1,5 @@
 ---
-title: 通信
+title: チップ間の通信
 parent: なぜ回路を作るのか
 
 nav_order: 15
@@ -9,7 +9,7 @@ last_modified_at: true
 state: notyet
 ---
 
-# **通信**
+# **チップ間の通信**
 {: .no_toc }
 
 ## 目次

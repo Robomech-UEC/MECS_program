@@ -58,7 +58,7 @@ Linux kernelはdriverを管理する方法として主に2つのシステムを�
 ちなみにDaemonの由来はドイツの精霊ダイモーンで、Daemonは人間の見えないところでこっそり手助けしてくれる存在だそうです。ちなみにdemon(英語で悪魔)はこの派生で、そのためDaemonのロゴは悪魔になってます。  
 さて、Daemonにはどのようなものがあるのでしょう?
 - systemd  
-linuxのシステムを触るとよく出てくるもので、多くのdebien系OSで初めに起動するdamemonです。system"d"のdはdaemonを表しています
+linuxのシステムを触るとよく出てくるもので、多くのdebien系OSで初めに起動するdaemmonです。system"d"のdはdaemonを表しています
 - sshd  
 リモート接続についてのdaemonです
 - systemctl  
