@@ -18,13 +18,18 @@ state: notyet
 1. TOC
 {:toc}
 
-## GPIO
-## 通信用のピン
-## HIGH,LOW
-## 割り込み
-## PWM
-## I2C
-## CAN
-## UART
-## RS485
+## デジタル信号
+### HIGH,LOW
+### 割り込み
+### PWM
+
+## シリアル通信
+### SPI
+### UART
+### RS485
+
+## バス型通信
+### I2C
+### CAN
+
 ## USB通信
