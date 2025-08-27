@@ -1,5 +1,5 @@
 ---
-title: リレー
+title: MOSFET
 parent: スイッチ
 
 nav_order: 5
@@ -9,7 +9,7 @@ last_modified_at: true
 status: notyet
 ---
 
-# **リレー**
+**MOSFET**
 {: .no_toc }
 
 ## 目次
