@@ -18,6 +18,8 @@ status: editing
 1. TOC
 {:toc}
 
+[スイッチの章で使っている回路シミュレータ](https://www.falstad.com/circuit/circuitjs.html)
+
 ## NC,NO
 それぞれnormaly closed, normaly open を意味します。  
 通常状態で短絡されているか解放されているかを示し、機械的なスイッチにもこの考え方は存在します。  
