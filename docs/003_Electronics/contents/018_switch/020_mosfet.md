@@ -2,11 +2,11 @@
 title: MOSFET
 parent: スイッチ
 
-nav_order: 5
+nav_order: 20
 
 author: 丸山響輝
 last_modified_at: true
-status: notyet
+state: notyet
 ---
 
 **MOSFET**
