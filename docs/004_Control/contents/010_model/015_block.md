@@ -6,7 +6,7 @@ nav_order: 15
 
 author: 丸山響輝
 last_modified_at: true
-state: notyet
+state: done
 ---
 
 # **ブロック線図**
