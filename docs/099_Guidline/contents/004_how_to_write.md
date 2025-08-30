@@ -34,5 +34,7 @@ mdファイルの上で---によりくぎられているところをfront matter
 trueにするとgitのcommitから最終更新を取得します。
 - state  
 ページの場合、できるだけつけるようにしましょう。notyet, editing, doneの3つのstateを用意してあります。  
+- nav_anabled
+ページ上に表示するかどうか。falseにすると表示されなくなる。ただし、urlにはアクセスできる。
 
 front matterやfooter、その他設定について中身が気になる、変更したい場合には[技術資料](010_technical_docs)を参照してください
