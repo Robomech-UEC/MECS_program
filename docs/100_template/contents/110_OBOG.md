@@ -5,7 +5,7 @@ nav_order: 110
 
 author: 丸山響輝
 last_modified_at: true
-nav_enabled: false
+nav_exclude: false
 status: editing
 ---
 
