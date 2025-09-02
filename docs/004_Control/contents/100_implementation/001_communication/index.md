@@ -6,7 +6,6 @@ nav_order: 1
 
 author: 丸山響輝
 last_modified_at: true
-state: editing
 ---
 
 # **制御における通信**
