@@ -1,15 +1,15 @@
 ---
-title: 通信の安定化
+title: 配線・回路
 parent: 通信
 
-nav_order: 15
+nav_order: 13
 
 author: 丸山響輝
 last_modified_at: true
 state: notyet
 ---
 
-# **通信の安定化**
+# **配線・回路**
 {: .no_toc }
 
 ## 目次
