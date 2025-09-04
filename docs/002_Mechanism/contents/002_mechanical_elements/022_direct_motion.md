@@ -7,3 +7,13 @@ author: 後藤波瑠
 last_modified_at: true
 state: editing
 ---
+
+# 直動機構
+{: .no_toc }
+
+## 目次
+{: .no_toc .text-delta }
+
+1. TOC
+{:toc}
+
