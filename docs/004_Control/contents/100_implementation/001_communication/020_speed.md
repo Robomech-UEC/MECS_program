@@ -1,5 +1,5 @@
 ---
-title: 速度
+title: 周期
 parent: 制御における通信
 
 nav_order: 20
@@ -9,7 +9,7 @@ last_modified_at: true
 state: editing
 ---
 
-# **速度**
+# **周期**
 {: .no_toc }
 
 ## 目次
