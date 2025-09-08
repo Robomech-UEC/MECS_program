@@ -18,4 +18,8 @@ state: notyet
 1. TOC
 {:toc}
 
-ツイストケーブル、通信反射
+## pull up / pull down
+
+## ツイストケーブル
+
+## 通信反射

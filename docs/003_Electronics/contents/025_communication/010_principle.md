@@ -6,7 +6,7 @@ nav_order: 10
 
 author: 丸山響輝
 last_modified_at: true
-state: notyet
+state: editing
 ---
 
 # **動作原理**
@@ -23,10 +23,17 @@ state: notyet
 ここでは[様々な通信](./005_communication)で説明した通信方式について、動作原理とその特徴について掘り下げて見ていきたいと思います。
 
 ## PWM
+
+
 ## 非同期シリアル
 ### UART
+TX,RXそれぞれにHighまたはLow信号が周期に従ってかかるだけです。
+
 ### RS-485
+
+
 ### CAN
+分かりません。
 
 ## 同期シリアル
 ### I2C
