@@ -9,6 +9,14 @@ last_modified_at: true
 
 # **format** 
 
+## 暗記分
+### stating ideas
+mentions, explains, points out, argues, adds, it is said, he says, stated, A's position is, nots, believe, Furthermore, against this by mentioning, 
+### stating examples
+for example, for instance, this illustrates, give an example of, to illustrate, 
+### conclusion
+strongly, clearly, demonstrates, 
+
 ## SPEAKING.  
 ### Question 1.  
 I think that [option A] is more important than [option B].  
@@ -19,7 +27,7 @@ Therefore, I strongly think [option A] is more important.
 ### Question 2.  
 The university announced that [policy].  
 The student agree with the plan.  
-First, he mensions that [reason 1]. For example, [illustration 1].  
+First, he mentions that [reason 1]. For example, [illustration 1].  
 Second, he adds that [reason 2]. For instance, [illustration 2].  
 Therefore, the student clearly support the plan.  
 
