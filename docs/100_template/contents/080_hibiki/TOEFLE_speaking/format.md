@@ -13,9 +13,9 @@ last_modified_at: true
 ### stating ideas
 mentions, explains, points out, argues, adds, it is said, he says, stated, A's position is, nots, believe, Furthermore, against this by mentioning, 
 ### stating examples
-for example, for instance, this illustrates, give an example of, to illustrate, 
+for example, for instance, this illustrates, give an example of, to illustrate, such as, in particular, 
 ### conclusion
-strongly, clearly, demonstrates, 
+strongly, clearly, demonstrates, reinforce my belief, 
 
 ## SPEAKING.  
 ### Question 1.  
