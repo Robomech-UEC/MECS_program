@@ -1,15 +1,15 @@
 ---
-title: 通信の安定化
-parent: 通信
+title: 歴史
+parent: ROS
 
-nav_order: 15
+nav_order: 5
 
 author: 丸山響輝
 last_modified_at: true
 state: notyet
 ---
 
-# **通信の安定化**
+# **歴史**
 {: .no_toc }
 
 ## 目次

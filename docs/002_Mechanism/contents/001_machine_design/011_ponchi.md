@@ -5,7 +5,7 @@ nav_order: 11
 
 author: 後藤波瑠
 last_modified_at: true
-state: editing
+state: done
 ---
 
 # **ポンチ絵**

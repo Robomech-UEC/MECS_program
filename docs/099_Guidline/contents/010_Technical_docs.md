@@ -123,7 +123,7 @@ ciがbuild、pagesがdeployについて書かれているもの(らしい)ので
 Githubのsetting/pagesでGithubActionを選ぶとjekyll.yamlを作らせようとしてきますが、すでにworkflowは存在するので新しいものは作らないでください。  
 pushするとしばらく時間はかかりますがjobがおわり、urlが表示される(または内容が更新される)ようになりますので、しばらく待ちましょう。
 
-# state
+## state
 各ページごとに編集stateが欲しいと思い作りました。stateはnavigationバーに表示されます。  
 どうやらnavに関するhtml変換は`_includes/components/nav`に入っているようなので、ここをあさります。  
 開発者ツールを使ってnavigationバーを見てみたところ、タイトルは`nav-list-link`というclassになっているようです。もっとよく見てみると、  

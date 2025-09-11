@@ -18,13 +18,10 @@ state: notyet
 1. TOC
 {:toc}
 
-## GPIO
-## 通信用のピン
-## HIGH,LOW
-## 割り込み
-## PWM
-## I2C
-## CAN
-## UART
-## RS485
-## USB通信
+## UART RS-485変換
+![uart_rs-485](imgs/020_uart_rs485.png)  
+UARTからRS-485に変換するためには、
+
+## USB TTL_Serial変換
+
+## 電圧のレベル変換

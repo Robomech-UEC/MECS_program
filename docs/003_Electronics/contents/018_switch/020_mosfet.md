@@ -10,7 +10,7 @@ comment: "知っていること＋調べたことを書きました。使用例�
 state: editing
 ---
 
-**MOSFET**
+# **MOSFET**
 {: .no_toc }
 
 ## 目次

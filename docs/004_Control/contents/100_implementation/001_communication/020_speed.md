@@ -1,15 +1,15 @@
 ---
-title: 通信方式の選択
-parent: 通信
+title: 周期
+parent: 制御における通信
 
-nav_order: 10
+nav_order: 20
 
 author: 丸山響輝
 last_modified_at: true
 state: notyet
 ---
 
-# **通信方式の選択**
+# **周期**
 {: .no_toc }
 
 ## 目次

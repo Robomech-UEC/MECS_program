@@ -5,7 +5,7 @@ nav_order: 1
 
 author: 後藤波瑠
 last_modified_at: true
-state: notyet
+state: done
 ---
 
 # **設計の進め方**

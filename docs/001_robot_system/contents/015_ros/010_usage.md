@@ -1,15 +1,15 @@
 ---
-title: 定格
-parent: コネクタ
+title: 使いかた
+parent: ROS
 
-nav_order: 5
+nav_order: 10
 
 author: 丸山響輝
 last_modified_at: true
 state: notyet
 ---
 
-# * 定格**
+# **使いかた**
 {: .no_toc }
 
 ## 目次
