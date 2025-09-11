@@ -6,7 +6,7 @@ nav_order: 20
 
 author: 丸山響輝
 last_modified_at: true
-state: editing
+state: notyet
 ---
 
 # **周期**
