@@ -6,7 +6,7 @@ nav_order: 5
 
 author: 丸山響輝
 last_modified_at: true
-state: notyet
+state: done
 ---
 
 # **歴史**
