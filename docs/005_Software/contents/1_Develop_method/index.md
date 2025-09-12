@@ -2,11 +2,15 @@
 title: 開発環境について
 parent: 象 ーSoftware
 
-nav_order: 50
+nav_order: 1
 
 author: 佐藤由弥
 last_modified_at: true
+state: notyet
 ---
+# **注意**
+
+ソフトウェアはかなり自由度があるので、紹介しきれないところがあります。より良いものを見つけたらそちらに乗り換えてください。
 
 # **開発環境について**
 
