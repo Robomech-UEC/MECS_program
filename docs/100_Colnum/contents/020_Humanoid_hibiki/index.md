@@ -1,12 +1,11 @@
 ---
 title: Humanoid Robot
-parent: Robot Sytem Overview
+parent: コラム
 
 nav_order: 20
 
 author: 丸山響輝
 last_modified_at: true
-state: done
 ---
 
 # **Humanoid Robot**
