@@ -77,8 +77,7 @@ ARマーカーの画像はこんな感じです。
 
 ソースコードは以下の通り↓
 
-````
-```python:ar_marker_detector_binary.py
+```python
 # opencvとaruco,行列用のnumpyを用意
 import cv2
 import cv2.aruco as aruco
@@ -167,7 +166,6 @@ def detect_aruco_and_get_real_positions(image_path: str,target_ids=[7, 8, 29]) -
 
     return results
 ```
-````
 
 既存のライブラリの関数を用いて、かなり簡潔に書いている。
 
