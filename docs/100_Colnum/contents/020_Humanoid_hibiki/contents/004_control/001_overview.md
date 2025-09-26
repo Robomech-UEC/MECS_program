@@ -143,8 +143,26 @@ Center of Pressur(CoP)とは、支持多角形の中で最も垂直圧力が高�
 ZMPとCenter of Pressurがずれるのは例えばこのような場合が考えられます。  
 ![CoP](imgs/001_LIP/CoP.png)  
 
+### Ground Reaction Force
+Ground Reaction Force (床反力) とは、足裏センサーによって計測される、床からの反発力を指します。これと足首関節トルクを用いることでZMP(CoP)を計算することができます。
+
 ### ZMPを規範とした歩行生成
-ここまで考えてきた歩行モーションの生成では
+ここまで考えてきた歩行モーションの生成では足位置→重心位置を決定することで、ZMPを制御していました。しかし、重心運動の計算には Reduced Order Model を用いているため、生成されるZMPは安定したものになりません。  
+そこで、足位置の後に先にZMPを決定し、そこからさらに重心位置を計算するという手法があります。  
+ここで用いられるのが Cart Table model (テーブル台車モデル) というモデルです。  
+このモデルは線形倒立振り子の拡張で、ZMPの位置がより見やすくなっています。  
+![cart-table](imgs/001_LIP/cart_table.png)  
+ZMPの式を離散化すると、単位時間ごとの重心位置ベクトルに変換行列をかけることで単位時間ごとのZMP位置を求められるようになります。  
+つまり、その変換行列の逆行列を用いればZMPから重心位置が求められる、ということです。  
+
+ZMPは基本的にぶれない方がよいとされており、さらに地面の接点と同一であった方がより安定とされています。  
+ただ、実際に人間の歩行を考えると歩いているときに常にある1点がCenter of Pressurになってはいないことが分かると思います。そのため、私としてはZMPを片脚支持の時に固定しておくことは制御として正しいのか少し疑問ではあります。  
+しかし，特に解決は思いつかないのでいったん保留します。接点からZMPがずれないことを安定とすると、理想的なCenter of MassとZMPの軌跡は次のようになります。  
+![COM-ZMP](imgs/001_LIP/COM_ZMP.png)  
+ZMPがジャンプしている区間が両脚支持期間になります。  
+このジャンプでは、両脚支持の瞬間に途切れることなくできるだけ線形に動く必要があります。これについて取り扱った論文として、[Fast Online Trajectory Optimization for the Bipedal
+ Robot Cassie](https://www.roboticsproceedings.org/rss14/p54.pdf) があります。この論文では vertex weightings という名前でCenter of Pressur を扱い、両脚時期間中の Supporting Polygon の中の vertex weighting ポイントの移動について制御しています。   
+
 
 ## Spring Loaded Inverted Pendulum
 Spring Loaded Inverted Peudulum (SLIP) とは、LIPのモデルにバネを追加したヒューマノイドの物理モデルです。  
